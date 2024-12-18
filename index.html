@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <!DOCTYPE html>
 <html lang="zh-CN">
 <head>
@@ -63,3 +64,87 @@
     <script src="script.js"></script>
 </body>
 </html> 
+=======
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>图片压缩工具</title>
+    <!-- 添加行楷字体 -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Ma+Shan+Zheng&display=swap">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>图片压缩工具</h1>
+            <p class="subtitle">支持 PNG、JPG 格式，快速压缩不失真</p>
+        </header>
+
+        <main>
+            <!-- 上传区域 -->
+            <div class="upload-area" id="uploadArea">
+                <input type="file" id="imageInput" accept="image/png,image/jpeg" hidden>
+                <div class="upload-box">
+                    <div class="upload-icon">
+                        <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                            <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/>
+                            <polyline points="17 8 12 3 7 8"/>
+                            <line x1="12" y1="3" x2="12" y2="15"/>
+                        </svg>
+                    </div>
+                    <p class="upload-text">拖拽图片到这里或点击上传</p>
+                    <p class="upload-hint">支持 PNG、JPG 格式</p>
+                </div>
+            </div>
+
+            <!-- 预览区域 -->
+            <div class="preview-container" id="previewContainer" style="display: none;">
+                <div class="preview-box">
+                    <h3>原始图片</h3>
+                    <div class="image-preview">
+                        <img id="originalImage" alt="原图预览">
+                    </div>
+                    <div class="image-info">
+                        <span>原始大小：</span>
+                        <span id="originalSize">0 KB</span>
+                    </div>
+                </div>
+
+                <div class="preview-box">
+                    <h3>压缩后</h3>
+                    <div class="image-preview">
+                        <img id="compressedImage" alt="压缩后预览">
+                    </div>
+                    <div class="image-info">
+                        <span>压缩后大小：</span>
+                        <span id="compressedSize">0 KB</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 控制面板 -->
+            <div class="control-panel" id="controlPanel" style="display: none;">
+                <div class="quality-control">
+                    <label for="quality">压缩质量</label>
+                    <div class="slider-container">
+                        <input type="range" id="quality" min="0" max="100" value="80">
+                        <span id="qualityValue">80%</span>
+                    </div>
+                </div>
+                <button id="downloadBtn" class="download-btn">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                        <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/>
+                        <polyline points="7 10 12 15 17 10"/>
+                        <line x1="12" y1="15" x2="12" y2="3"/>
+                    </svg>
+                    下载压缩后的图片
+                </button>
+            </div>
+        </main>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
+>>>>>>> 4bef587da5bb7e9eda89cd38fe160160dc52a4a1
